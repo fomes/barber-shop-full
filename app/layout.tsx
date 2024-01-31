@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { Inter } from "next/font/google";
 
 import "./globals.css";
+import Footer from "@/components/footer";
 
 const font = Inter({
   subsets: ["latin"],
@@ -21,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(font.className, "dark")}>{children}</body>
+      <body className={cn(font.className, "dark")}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
